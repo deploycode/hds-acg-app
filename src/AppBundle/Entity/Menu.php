@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Menu
 {
     /**
-     * @ORM\OneToMany(targetEntity="Post", mappedBy="menu")
+     * @ORM\OneToMany(targetEntity="Post", mappedBy="menu", cascade={"persist", "remove"})
      */
     private $posts;
     public function __construct()
