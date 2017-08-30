@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\AdvancedUserInterface;
 
 /**
  * User
@@ -10,16 +11,12 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
  */
-class User
+class User implements AdvancedUserInterface, \Serializable
 {
     /**
      * @ORM\OneToMany(targetEntity="Post", mappedBy="user")
      */
     private $posts;
-    public function __construct()
-    {
-      $this->posts = new ArrayCollection();
-    }
 
     /**
      * @var int
@@ -47,7 +44,7 @@ class User
     /**
      * @var string
      *
-     * @ORM\Column(name="role", type="string", length=50)
+     * @ORM\Column(name="role", type="string", length=50, columnDefinition="ENUM('ROLE_MEMBER', 'ROLE_EDITOR', 'ROLE_PUBLISHER', 'ROLE_ADMIN')" )
      */
     private $role;
 
@@ -72,6 +69,38 @@ class User
      */
     private $updatedAt;
 
+    public function isAccountNonExpired(){return true;}
+    public function isAccountNonLocked(){return true;}
+    public function isCredentialsNonExpired(){return true;}
+    public function isEnabled(){return $this->isActive;}
+    public function getRoles(){return array($this->role);}
+    public function getSalt(){return null;}
+    public function eraseCredentials(){}
+    /** @see \Serializable::serialize() */
+    public function serialize()
+    {
+        return serialize(array(
+            $this->id,
+            $this->username,
+            $this->password,
+            $this->isActive,
+        ));
+    }
+    /** @see \Serializable::unserialize() */
+    public function unserialize($serialized)
+    {
+        list (
+            $this->id,
+            $this->username,
+            $this->password,
+            $this->isActive,
+        ) = unserialize($serialized);
+    }
+    public function __construct()
+    {
+      $this->posts = new ArrayCollection();
+      $this->isActive = true;
+    }
 
     /**
      * Get id
