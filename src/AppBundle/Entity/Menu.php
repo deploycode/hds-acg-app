@@ -13,6 +13,15 @@ use Doctrine\ORM\Mapping as ORM;
 class Menu
 {
     /**
+     * @ORM\OneToMany(targetEntity="Post", mappedBy="menu")
+     */
+    private $posts;
+    public function __construct()
+    {
+      $this->posts = new ArrayCollection();
+    }
+
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -156,4 +165,3 @@ class Menu
         return $this->updatedAt;
     }
 }
-

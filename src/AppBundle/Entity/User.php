@@ -13,6 +13,15 @@ use Doctrine\ORM\Mapping as ORM;
 class User
 {
     /**
+     * @ORM\OneToMany(targetEntity="Post", mappedBy="user")
+     */
+    private $posts;
+    public function __construct()
+    {
+      $this->posts = new ArrayCollection();
+    }
+
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -218,4 +227,3 @@ class User
         return $this->updatedAt;
     }
 }
-

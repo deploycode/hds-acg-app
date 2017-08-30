@@ -12,6 +12,19 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Post
 {
+
+    /**
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="posts")
+     * @ORM\JoinColumn(name="post_id", referencedColumnName="id")
+     */
+    private $user;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Menu", inversedBy="posts")
+     * @ORM\JoinColumn(name="post_id", referencedColumnName="id")
+     */
+    private $menu;
+
     /**
      * @var int
      *
@@ -280,4 +293,3 @@ class Post
         return $this->updatedAt;
     }
 }
-
