@@ -3,11 +3,12 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Menu
  *
- * @ORM\Table(name="menu")
+ * @ORM\Table(name="menus")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\MenuRepository")
  */
 class Menu
