@@ -18,14 +18,7 @@ class UserType extends AbstractType
     {
         $builder
         ->add('username', EmailType::class, array ('attr'=>array('class'=>'form-control')) )
-        ->add('password', PasswordType::class, array ('attr'=>array('class'=>'form-control')) )
-        ->add('role' , ChoiceType::class,
-           array(
-            'choices' => array(
-            'administrador' => 'ROLE_ADMIN'),
-            'attr'    => array(
-            'class'         =>'form-control')
-        ));
+        ->add('password', PasswordType::class, array ('attr'=>array('class'=>'form-control')) );
     }
 
     /**

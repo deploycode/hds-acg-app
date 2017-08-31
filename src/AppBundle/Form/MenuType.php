@@ -5,6 +5,7 @@ namespace AppBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class MenuType extends AbstractType
 {
@@ -13,9 +14,10 @@ class MenuType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name')->add('slug')->add('createdAt')->add('updatedAt');
+        $builder
+        ->add('name', TextType::class ,array ('attr'=>array('class'=>'form-control')) );
     }
-    
+
     /**
      * {@inheritdoc}
      */
