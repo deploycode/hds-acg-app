@@ -11,6 +11,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  *
  * @ORM\Table(name="users")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class User implements AdvancedUserInterface, \Serializable
 {
@@ -101,6 +102,23 @@ class User implements AdvancedUserInterface, \Serializable
     {
       $this->posts = new ArrayCollection();
       $this->isActive = true;
+    }
+
+    /**
+    * @ORM\PrePersist
+    */
+    public function setCreatedAtValue()
+    {
+      $this->createdAt=new \DateTime();
+    }
+
+    /**
+    * @ORM\PrePersist
+    * @ORM\PreUpdate
+    */
+    public function setUpdatedAtValue()
+    {
+      $this->updatedAt=new \DateTime();
     }
 
     /**
