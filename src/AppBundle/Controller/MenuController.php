@@ -47,8 +47,8 @@ class MenuController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $slug = $this->get('AppBundle\Utils\Slugger')->slugify($service->getName());
-            $service->setSlug($slug);
+            $slug = $this->get('AppBundle\Utils\Slugger')->slugify($menu->getName());
+            $menu->setSlug($slug);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($menu);
@@ -93,8 +93,8 @@ class MenuController extends Controller
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
 
-            $slug = $this->get('AppBundle\Utils\Slugger')->slugify($service->getName());
-            $service->setSlug($slug);
+            $slug = $this->get('AppBundle\Utils\Slugger')->slugify($menu->getName());
+            $menu->setSlug($slug);
 
             $this->getDoctrine()->getManager()->flush();
 
