@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{asset('hds-acg-layout/plugins/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('hds-acg-layout/plugins/font-awesome/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('hds-acg-layout/css/main.css')}}" >
+    <link rel="stylesheet" href="{{asset('hds-acg-layout/css/carousel.css')}}" >
+  </head>
+  <body>
+    <header>
+      <img src="img/logo.png" alt="" id="logo">
+      <!-- carousel -->
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <!-- <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol> -->
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="img/banner1.jpg" alt="..." class="img img-responsive sheet al100">
+          </div>
+          <div class="item">
+            <img src="img/banner2.jpg" alt="..." class="img img-responsive sheet al100">
+          </div>
+          <div class="item">
+            <img src="img/banner3.jpg" alt="..." class="img img-responsive sheet al100">
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <!-- menu -->
+      <nav class="navbar menu-third sombra">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" id="navbar-brand-home" href="#"><img src="img/logo.png" alt=""></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" id="menu">
+              {% for menu in menus %}
+                <li><a href="#"> {{menu.name}} <span class="sr-only">(current)</span></a></li>
+              {% endfor %}
+              <li><a href="#">Contáctenos <span class="sr-only">(current)</span></a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </header>
+    <section class="container-fluid">
+      <!-- bienvenida -->
+
+      <div class="row">
+        <div class="col-xs-12 thumbnail welcome sheet sin-padding">
+          <img src="img/welcome.jpg" alt="..." class="img img-responsive sheet al100">
+          <div class="caption">
+            <h3 class="text-center">¡Bienvenido!</h3>
+            <p  class="text-center p-welcome">
+              La VISTA es uno de los sentidos más útiles, pero pocas veces pensamos en ello; tradicionalmente acudimos al médico cuando sentimos dolor o malestar. Sin embargo, algunos padecimientos se desarrollan silenciosamente y cuando se manifiestan es imposible revertir el daño, este es el caso del glaucoma.  Actualmente la esperanza de vida al nacer es de 74 años, durante todo este tiempo nuestros ojos deben cumplir su objetivo funcional y estético, pero ¿cuánto hemos hecho para que <br> nuestros ojos duren toda la vida? <br>
+              En esta página encontrará información importante que le ayudará a conservar su salud visual. <br>
+            </p>
+            <p class="text-center"><a href="post.html" class="btn btn-sm btn-primary btn-hds" role="button">Conoce más</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="row sheet">
+        <div class="col-xs-12 sin-padding verde sheet">
+          <div id="carousel-example-generic-2" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+
+              <div class="item active">
+                <div class="col-xs-6 verde item-todo">
+                  <h3 class="text-center">Todo sobre Glaucoma</h3>
+                  <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p class="text-center"><a href="post.html" class="btn btn-sm btn-primary btn-hds" role="button">Conoce más</a></p>
+                </div>
+                <div class="col-xs-6 sin-padding">
+                  <img src="img/m1.jpg" alt="" class="img img-responsive sheet al100">
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="col-xs-6 azul item-todo">
+                  <h3 class="text-center">Todo sobre Glaucoma</h3>
+                  <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p class="text-center"><a href="post.html" class="btn btn-sm btn-primary btn-hds" role="button">Conoce más</a></p>
+                </div>
+                <div class="col-xs-6 sin-padding">
+                  <img src="img/m1.jpg" alt="" class="img img-responsive sheet al100">
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="col-xs-6 morado item-todo">
+                  <h3 class="text-center">Todo sobre Glaucoma</h3>
+                  <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p class="text-center"><a href="post.html" class="btn btn-sm btn-primary btn-hds" role="button">Conoce más</a></p>
+                </div>
+                <div class="col-xs-6 sin-padding">
+                  <img src="img/m1.jpg" alt="" class="img img-responsive sheet al100">
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic-2" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic-2" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row thumbnail welcome sheet sin-padding">
+        <img src="img/manos.jpg" alt="..." class="sheet img img-responsive al100">
+        <div class="caption tengo">
+          <div  class="text-center col-xs-4 glaucoma">
+            <img src="img/1.png" alt="" class="img img-responsive">
+            <h4>Tengo <br>glaucoma</h4>
+          </div>
+          <div  class="text-center col-xs-4 sospecha">
+            <img src="img/2.png" alt="" class="img img-responsive">
+            <h4>Tengo sospecha <br> de glaucoma</h4>
+          </div>
+          <div  class="text-center col-xs-4 no">
+            <img src="img/3.png" alt="" class="img img-responsive">
+            <h4>No Tengo <br> glaucoma</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row naranja sheet">
+        <h3 class="text-center">Noticias</h3>
+        <div class="col-xs-12">
+          <div class="carousel carousel-showmanymoveone slide" id="carousel123">
+            <div class="carousel-inner">
+              <div class="item active">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <a href="#">
+                    <img src="http://placehold.it/500/A054A6/fff/&amp;text=1" class="img-responsive">
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <a href="#">
+                    <img src="http://placehold.it/500/F654A6/fff/&amp;text=2" class="img-responsive">
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <a href="#">
+                    <img src="http://placehold.it/500/D554A6/fff/&amp;text=3" class="img-responsive">
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <a href="#">
+                    <img src="http://placehold.it/500/C454A6/fff/&amp;text=4" class="img-responsive">
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <a href="#">
+                    <img src="http://placehold.it/500/B354A6/fff/&amp;text=5" class="img-responsive">
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <a href="#">
+                    <img src="http://placehold.it/500/A254A6/fff/&amp;text=6" class="img-responsive">
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <a href="#">
+                    <img src="http://placehold.it/500/A054A6/fff/&amp;text=7" class="img-responsive">
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <a href="#">
+                    <img src="http://placehold.it/500/A054A6/fff/&amp;text=8" class="img-responsive">
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <a href="#">
+                    <img src="http://placehold.it/500/A054A6/fff/&amp;text=9" class="img-responsive">
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <a href="#">
+                    <img src="http://placehold.it/500/A054A6/fff/&amp;text=1" class="img-responsive">
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <a href="#">
+                    <img src="http://placehold.it/500/A054A6/fff/&amp;text=1" class="img-responsive">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a class="left carousel-control" href="#carousel123" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+            <a class="right carousel-control" href="#carousel123" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <p class="text-center"><a href="post.html" class="btn btn-sm btn-primary btn-hds btn-new" role="button">Conoce más</a></p>
+        </div>
+      </div>
+      <div class="text-center col-xs-12" id="p_number"><img src="img/phone.png" id="phone" alt=""></div>
+      <div class="row" id="row-banner-inferior">
+        <img src="img/banner-inferior-2.jpg" id="img-banner-inferior" class="img img-responsive">
+        <ul class="nav nav-pills" id="ul-banner-inferior">
+          <li><a href="#"><i class="fa fa-map-marker"></i></a></li>
+          <li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+        <!-- <div  class="text-center col-xs-12 sin-padding" id="p-banner-inferior"></div> -->
+      </div>
+    </section>
+    <footer class="sin-padding col-xs-12">
+      <div class="col-xs-10 col-xs-offset-1">
+        <div  class="col-xs-6">
+            <h2 id="somos">Quienes somos</h2>
+            <p class="text-justify" id="p-somos">
+              La Asociación Colombiana de Glaucoma es una entidad sin ánimo de lucro de carácter nacional, adscrita a la Asociación Mundial de pacientes con Glaucoma.  Somos un grupo interdisciplinario de profesionales que unidos trabajamos para prevenir la ceguera por glaucoma en Colombia, a través de un diagnóstico oportuno y un tratamiento adecuado. <br><br>
+              Nos hemos especializado en la prevención de la ceguera por glaucoma, contamos con la mejor tecnología, conocimiento y experiencia al servicio de la salud visual en Bogotá y en Colombia. <br><br>
+              Nuestro objetivo principal es reducir el número de ciegos en Colombia, por lo cual tenemos definidas actividades de educación, información, fomento, promoción y prevención encaminadas al diagnóstico y tratamiento oportuno del Glaucoma. <br><br>
+              La Asociación Colombiana de Glaucoma, se encuentra ubicada en Bogotá, Colombia. <br><br>
+            </p>
+          </div>
+        <div  class="text-center col-xs-3 margen100">
+            <h5 id="prevencion">Jornadas de <br> Prevención</h5>
+          </div>
+        <div class="col-xs-3 margen100">
+            <img src="img/logo-gray.png" alt="" id="logo-gray" class="img img-responsive">
+          </div>
+      </div>
+      <p class="naranja text-center col-xs-12 sin-margen">
+        <br>Alta Visión: Cr 14 No. 86a - 15 Bogotá - Colombia PBX: 6164585 Opción: 5. E-mail: educacion@altavision.com.co
+        <br>La información médica aquí descrita no remplaza una valoración oftalmológica.
+        <br>La reproducción de texto o imagénes incluidas en este sitio web esta estrictamente prohibida.
+      </p>
+    </footer>
+    <!-- scripts -->
+    <script src="{{asset('hds-acg-layout/plugins/jquery-3.2.1.min.js')}}"></script>
+    <script src="{{asset('hds-acg-layout/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('hds-acg-layout/js/carousel.js')}}"></script>
+    <script src="{{asset('hds-acg-layout/js/main.js')}}"></script>
+  </body>
+</html>
