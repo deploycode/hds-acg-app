@@ -1,0 +1,318 @@
+@font-face {font-family: "Helvetica";
+  src: url("../fonts/helvetica/418c2fe986e22038e848f5235df62b19.eot"); /* IE9*/
+  src: url("../fonts/helvetica/418c2fe986e22038e848f5235df62b19.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../fonts/helvetica/418c2fe986e22038e848f5235df62b19.woff2") format("woff2"), /* chrome、firefox */
+  url("../fonts/helvetica/418c2fe986e22038e848f5235df62b19.woff") format("woff"), /* chrome、firefox */
+  url("../fonts/helvetica/418c2fe986e22038e848f5235df62b19.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../fonts/helvetica/418c2fe986e22038e848f5235df62b19.svg#Helvetica LT") format("svg"); /* iOS 4.1- */
+}
+@font-face {font-family: "Helvetica LT";
+  src: url("../fonts/helvetica-lt/4376652caec8a8cd4024347f48b1330f.eot"); /* IE9*/
+  src: url("../fonts/helvetica-lt/4376652caec8a8cd4024347f48b1330f.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../fonts/helvetica-lt/4376652caec8a8cd4024347f48b1330f.woff2") format("woff2"), /* chrome、firefox */
+  url("../fonts/helvetica-lt/4376652caec8a8cd4024347f48b1330f.woff") format("woff"), /* chrome、firefox */
+  url("../fonts/helvetica-lt/4376652caec8a8cd4024347f48b1330f.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../fonts/helvetica-lt/4376652caec8a8cd4024347f48b1330f.svg#Helvetica Light") format("svg"); /* iOS 4.1- */
+}
+/*==========================*/
+body{
+  font-family: "Helvetica LT";
+}
+footer{
+  color: white;
+  background-color: #fcfcfc;
+}
+footer>p{
+  font-size:16px;
+}
+/*==========================*/
+#articulo{
+  margin-bottom: 60px;
+}
+#carousel123{
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.64);
+}
+#carousel-example-generic{
+  height: 90vh;
+}
+/*#carousel-example-generic-2 img{
+width: 100%;
+}*/
+#img-banner-inferior{
+  width: 100%;
+}
+#logo{
+  width: 35%;
+  position: absolute;
+  z-index: 1;
+  top: 55%;
+  left: 32%;
+}
+#logo-menu{
+  width: 48px;
+}
+#logo-gray{
+  width: 300px;
+  margin: auto;
+}
+#menu>li>a{
+  color: white;
+  font-size: 14px;
+  height: 10vh;
+  padding: 4vh 20px 20px 20px;
+  font-family: "Helvetica LT";
+}
+#numberphone{
+  font-size: 65px;
+  color: #67a6db;
+}
+#navbar-brand-home img{
+  width: 120px;
+  padding: 10px;
+}
+#navbar-brand-home{
+  padding: 0px;
+}
+#phone{
+  width: 400px;
+  margin-top: 15px;
+  margin-bottom: -40px;
+}
+#p_number{
+  margin-top: -60px;
+  z-index: 1;
+}
+#p-banner-inferior{
+  margin-top: -60px;
+  z-index: -1;
+}
+#p-somos{
+  font-size: 12px;
+  font-family: "Helvetica LT";
+  color: black;
+}
+#p-banner-inferior img{
+  width: 100%;
+}
+#prevencion, #somos{
+  font-size: 40px;
+  color: #f59c00;
+  font-weight: bold;
+}
+#post_title{
+  font-family: "Helvetica LT";
+  font-size: 50px;
+  color: #91c137;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+#post_content{
+  font-size: 14px;
+}
+#row-somos{
+  background-color: #fcfcfc;
+}
+#row-somos p{
+  color: black;
+}
+#row-banner-inferior{
+  position: relative;
+}
+#ul-banner-inferior>li>a:focus , #ul-banner-inferior>li>a:hover{
+  background: transparent;
+}
+#ul-banner-inferior{
+  position: absolute;
+  bottom: 60px;
+}
+#ul-banner-inferior>li>a>i{
+  font-size: 48px;
+  color: white;
+  padding: 30px;
+}
+/*==========================*/
+.azul{
+  background-color: #1c8ecd;
+}
+.al100{
+  width: 100%;
+}
+.amarillo{
+  background-color: yellow;
+}
+/*==========================*/
+.btn{
+  font-family: "Helvetica LT";
+}
+.btn-hds{
+  border: 0px;
+  border-radius: 10px 0;
+  background-color: #67a6db;
+}
+.btn-new{
+  margin-top: 30px;
+}
+.breadcrumb{
+  font-size: 14px;
+}
+/*==========================*/
+.caption{
+  background-color: white;
+  opacity: 0.9;
+  position: absolute;
+  bottom: 0px;
+}
+.carousel-control{
+  background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0, 0, 0, 0) 100%)!important;
+  opacity: 1;
+}
+/*==========================*/
+.item-todo{
+  height: 100vh;
+  padding: 0px 10%;
+}
+/*==========================*/
+.morado{
+  background-color: #734d88;
+}
+.mi-thumbnail{
+  border: 0px;
+  border-radius: 0px;
+  background-color: transparent;
+  padding: 0px;
+}
+.margen100{
+  margin-top:100px;
+}
+/*==========================*/
+.navbar{
+  background-color: #f59c00;
+  border-radius: 0px;
+  border: 0px;
+  margin:0px;
+}
+.nav{
+  width: 90%;
+  text-align: center;
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+  background: rgba(39,145,63,1);
+}
+.nav>li>a:focus , .nav>li>a:hover{
+  background: rgba(39,145,63,1);
+}
+
+.nav>li{
+  float: none;
+  display: inline-block;
+}
+.nav>li:active{
+  background: blue;
+}
+.naranja{
+  background-color: #f59c00;
+}
+.naranja h3{
+  font-size: 100px;
+  color: white;
+  font-family: "Helvetica LT";
+}
+.new p{
+  font-size: 30px;
+  color: white;
+  font-family: "Helvetica LT";
+}
+.new{
+  background-color: rgba(103, 166, 219, 0.81);
+  width: 100%;
+}
+.navbar-brand>img{
+  width: 200px;
+  padding: 15px;
+}
+/*==========================*/
+.p-welcome{
+  padding: 5px 10% ;
+  font-size: 14px;
+  font-family: "Helvetica LT";
+}
+/*==========================*/
+.sin-padding{
+  padding: 0px;
+}
+.sheet{
+  height: 100vh!important;
+}
+.sheet90{
+  height: 90vh;
+}
+.sheet10{
+  height: 10vh;
+}
+.sin-margen{
+  margin: 0px;
+}
+.sombra{
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+/*==========================*/
+.tengo>div{
+  padding: 15px 80px;
+  min-height: 100%;
+}
+.tengo h4{
+  font-size: 25px;
+  color: white;
+  margin-bottom: 15px;
+  font-family: "Helvetica LT"
+}
+
+.tengo img{
+  width: 50%;
+  margin: auto;
+  margin-bottom: 15px;
+}
+.tengo{
+  padding: 0px!important;
+  background-color: transparent;
+}
+.tengo .glaucoma , .tengo .no{
+  background-color: rgba(61, 183, 200, 0.65);
+}
+.tengo .sospecha{
+  background-color: rgba(252, 148, 62, 0.71);
+}
+/*/////////////////////////////////////////*/
+.verde{
+  background-color: #91c139;
+}
+.verde h3{
+  margin-top: 20vh;
+  font-size: 50px;
+  margin-bottom: 40px;
+  color: white;
+  font-family: "Helvetica LT";
+}
+.verde p{
+  color: white;
+}
+/*==========================*/
+.welcome{
+  border: 0px;
+  position: relative;
+  margin-bottom: 0px;
+}
+  .welcome h3{
+    color: #f59c00;
+    font-size: 30px;
+    font-family: "Helvetica LT";
+  }
+  .welcome p{
+    margin-bottom: 20px;
+  }
+  .welcome > .caption{
+    width: 100%;
+  }
