@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Utils\Slugger;
-
+use AppBundle\Entity\User;
 
 /**
  * Post controller.
@@ -56,6 +56,10 @@ class PostController extends Controller
             $file_name=md5(uniqid()).".".$ext;
             $file->move("uploads", $file_name);
             $post->setImage($file_name);
+
+            $userId = $this->get('security.token_storage')->getToken()->getUser()->getId();
+            $user = $this->getDoctrine()->getRepository(User::class)->find($userId);
+            $post->setUser($user);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($post);
