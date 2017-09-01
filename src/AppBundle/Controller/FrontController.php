@@ -19,7 +19,7 @@ class FrontController extends Controller
      return $this->render('home.html.twig', array ('menus'=>$menus));
    }
    /**
-  *@Route("/articulos/{slug}", name="articulo")
+  *@Route("/{articulos}/{slug}", name="articulo")
   */
   public function articuloAction(Post $post , $slug)
   {
@@ -28,8 +28,8 @@ class FrontController extends Controller
     ->orderBy('p.updatedAt', 'DESC')
     ->getQuery();
     $menus = $em->getRepository('AppBundle:Menu')->findAll();
-    $post= $em->getRepository('AppBundle:Post')->findOneBySlug($slug);
-    $collage = $query->getResult();
-    return $this->render('post.html.twig' , array('post' => $post , 'collage'=>$collage , 'menus'=>$menus) );
+    $the_post= $em->getRepository('AppBundle:Post')->findOneBySlug($slug);
+    $posts = $em->getRepository('AppBundle:Post')->findAll();
+    return $this->render('post.html.twig' , array('posts' => $posts ,'the_post' => $the_post , 'menus'=>$menus) );
   }
 }

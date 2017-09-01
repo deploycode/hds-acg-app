@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>{{the_post.title }} | ACG</title>
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,7 +27,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/"><img src="{{asset('hds-acg-layout/img/logo.png')}}" alt=""></a>
+            <!-- <a class="navbar-brand" href="/"><img src="{{asset('hds-acg-layout/img/logo.png')}}" alt=""></a> -->
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -46,19 +46,23 @@
       <!-- bienvenida -->
       <div class="col-xs-10 col-xs-offset-1">
         <ol class="breadcrumb">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">Menu</a></li>
-          <li class="active">{{post.title}}</li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#">{{the_post.menu.name}}</a></li>
+          <li class="active">{{the_post.title}}</li>
         </ol>
       </div>
       <div class="col-xs-10 col-xs-offset-1">
-        <h1 class="text-center" id="post_title">{{post.title}}</h1>
+        <h1 class="text-center" id="post_title">{{the_post.title}}</h1>
       </div>
       <article class="col-xs-10 col-xs-offset-1 sin-padding" id="articulo">
-        <div class="col-xs-6">
-          <img src="img/360.jpg" alt="" class="img img-responsive">
+        <div class="col-xs-3">
+          <ul>
+            {% for post in posts if post.menu.id == the_post.menu.id %}
+              <li><a href="#">{{ post.title }}</a></li>
+            {% endfor %}
+          </ul>
         </div>
-        <div class="col-xs-6">
+        <div class="col-xs-9">
           <p class="text-justify" id="post_content">
             {% block content %}{% endblock %}
           </p>
@@ -80,7 +84,7 @@
             <h5 id="prevencion">Jornadas de <br> Prevención</h5>
           </div>
         <div class="col-xs-3 margen100">
-            <img src="img/logo-gray.png" alt="" id="logo-gray" class="img img-responsive">
+            <img src="{{asset('hds-acg-layout/img/logo-gray.png')}}" alt="" id="logo-gray" class="img img-responsive">
           </div>
       </div>
       <p class="naranja text-center col-xs-12 sin-margen">
