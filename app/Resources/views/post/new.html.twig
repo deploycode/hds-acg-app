@@ -13,4 +13,10 @@
         <input type="submit" value="Create" class="btn btn-success" />
       </div>
     {{ form_end(form) }}
+    {% block WYSIWYG %}
+       <script>
+           var editor = CKEDITOR.replace( 'appbundle_post_content' );
+           CKFinder.setupCKEditor( editor, 'ckfinder/' );
+       </script>
+    {% endblock %}
 {% endblock %}
