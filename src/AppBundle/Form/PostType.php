@@ -28,7 +28,7 @@ class PostType extends AbstractType
         ->add('image', FileType::class, array('data_class' => null , 'required' => false , 'attr' => array('class' => 'form-control')) )
         ->add('content', TextareaType::class, array('attr' => array('class' => 'form-control')) )
         ->add('isActive', CheckboxType::class , array('attr'=> array('checked'=>'true')) )
-        ->add('isFavorite', CheckboxType::class );
+        ->add('isFavorite');
     }
 
     /**

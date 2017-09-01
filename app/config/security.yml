@@ -35,6 +35,6 @@ security:
             algorithm: bcrypt
 
     access_control:
-        # - { path: ^/user, roles: IS_AUTHENTICATED_FULLY }
-        # - { path: ^/menu, roles: IS_AUTHENTICATED_FULLY }
-        # - { path: ^/post, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/user, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/menu, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/post, roles: IS_AUTHENTICATED_FULLY }

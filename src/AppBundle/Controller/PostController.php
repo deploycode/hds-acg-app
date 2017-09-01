@@ -51,11 +51,14 @@ class PostController extends Controller
             $slug = $this->get('AppBundle\Utils\Slugger')->slugify($post->getTitle());
             $post->setSlug($slug);
 
-            $file=$form['image']->getData();
-            $ext=$file->guessExtension();
-            $file_name=md5(uniqid()).".".$ext;
-            $file->move("uploads", $file_name);
-            $post->setImage($file_name);
+            if (!empty($form['image']->getData()))
+            {
+              $file=$form['image']->getData();
+              $ext=$file->guessExtension();
+              $file_name=md5(uniqid()).".".$ext;
+              $file->move("uploads", $file_name);
+              $post->setImage($file_name);
+            }
 
             $userId = $this->get('security.token_storage')->getToken()->getUser()->getId();
             $user = $this->getDoctrine()->getRepository(User::class)->find($userId);
