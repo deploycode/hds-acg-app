@@ -8,22 +8,14 @@
     <table class="table table-striped table-bordered">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Name</th>
-                <th>Slug</th>
-                <th>Createdat</th>
-                <th>Updatedat</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for menu in menus %}
             <tr>
-                <td><a href="{{ path('menu_show', { 'id': menu.id }) }}">{{ menu.id }}</a></td>
                 <td>{{ menu.name }}</td>
-                <td>{{ menu.slug }}</td>
-                <td>{% if menu.createdAt %}{{ menu.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{% if menu.updatedAt %}{{ menu.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>
                     <ul>
                         <li>
