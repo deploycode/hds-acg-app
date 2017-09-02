@@ -67,8 +67,10 @@ width: 100%;
   color: #67a6db;
 }
 #navbar-brand-home img{
-  width: 120px;
-  padding: 10px;
+  width: 50px;;
+  /*background-color: white;*/
+  border-radius: 30px;
+  /*padding: 10px;*/
 }
 #navbar-brand-home{
   padding: 0px;
@@ -207,7 +209,7 @@ width: 100%;
   margin:0px;
 }
 .nav{
-  width: 90%;
+  width: auto;
   text-align: center;
 }
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
