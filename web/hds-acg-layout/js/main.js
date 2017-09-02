@@ -26,3 +26,22 @@ $(document).ready(function(){
 			$('#menu').removeClass('in');
 	});
 });
+$(document).ready(function(){
+  var flag = false;
+  var scroll;
+
+  $(window).scroll(function(){
+    scroll = $(window).scrollTop();
+    if((scroll > 500) && (screen.width>768)){
+      if(!flag){
+        $("#indicador").css({"display": "none"});
+        flag = true;
+      }
+    }else{
+      if(flag){
+        $("#indicador").css({"display": "block"});
+        flag = false;
+      }
+    }
+  });
+});
