@@ -67,7 +67,11 @@
             <ul class="nav navbar-nav" id="menu">
               <li><a href="/">Inicio <span class="sr-only">(current)</span></a></li>
               {% for menu in menus %}
-                <li><a href="#"> {{menu.name}} <span class="sr-only">(current)</span></a></li>
+                {% for post in menu.posts %}
+                    {% if loop.first %}
+                      <li><a href="/articulos/{{post.slug}}"> {{post.menu.name}} <span class="sr-only">(current)</span></a></li>
+                    {% endif %}
+                {% endfor %}
               {% endfor %}
               <li><a href="/nosotros/">Contáctenos <span class="sr-only">(current)</span></a></li>
             </ul>

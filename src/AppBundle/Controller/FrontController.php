@@ -14,16 +14,17 @@ class FrontController extends Controller
    public function homeAction()
    {
      $em = $this->getDoctrine()->getManager();
-     $menus = $em->getRepository('AppBundle:Menu')->findAll();
 
+     $menus = $em->getRepository('AppBundle:Menu')->findAll();
      return $this->render('home.html.twig', array ('menus'=>$menus));
    }
    /**
-  *@Route("/{articulos}/{slug}", name="articulo")
+  *@Route("/articulos/{slug}", name="post_view")
   */
-  public function articuloAction(Post $post , $slug)
+  public function viewAction(Post $post , $slug)
   {
     $em = $this->getDoctrine()->getManager();
+    
     $query = $em->getRepository('AppBundle:Post')->createQueryBuilder('p')
     ->orderBy('p.updatedAt', 'DESC')
     ->getQuery();
