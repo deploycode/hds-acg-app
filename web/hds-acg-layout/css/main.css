@@ -14,9 +14,17 @@
   url("../fonts/helvetica-lt/4376652caec8a8cd4024347f48b1330f.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
   url("../fonts/helvetica-lt/4376652caec8a8cd4024347f48b1330f.svg#Helvetica Light") format("svg"); /* iOS 4.1- */
 }
+@font-face {
+    font-family: 'Hind Siliguri';
+    src: url('../fonts/hindsiliguri/hindsiliguri-light-webfont.woff2') format('woff2'),
+         url('../fonts/hindsiliguri/hindsiliguri-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 /*==========================*/
 body{
-  font-family: "Helvetica LT";
+
 }
 footer{
   color: white;
@@ -27,7 +35,12 @@ footer>p{
 }
 /*==========================*/
 #articulo{
-  margin-bottom: 60px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px 15px 0px 0px;
+  font-family: "Helvetica LT";
+  color: #2a2a2a;
+  line-height: 25px;
 }
 #carousel123{
   padding: 50px;
@@ -58,7 +71,7 @@ width: 100%;
 }
 #menu>li>a{
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   padding: 15px 20px 20px 20px;
   font-family: "Helvetica LT";
 }
@@ -104,8 +117,10 @@ width: 100%;
 #post_title{
   font-family: "Helvetica LT";
   font-size: 50px;
-  color: #91c137;
-  margin-top: 60px;
+  /*color: #91c137;*/
+  color: white;
+  font-weight: bold;
+  margin-top: 100px;
   margin-bottom: 60px;
 }
 #post_content{
@@ -157,6 +172,9 @@ width: 100%;
 .breadcrumb{
   font-size: 14px;
 }
+.banner-fixed{
+  position: absolute;
+}
 /*==========================*/
 .caption{
   background-color: white;
@@ -207,10 +225,11 @@ width: 100%;
   border-radius: 0px;
   border: 0px;
   margin:0px;
+  z-index: 99;
 }
 .nav{
-  width: auto;
   text-align: center;
+  height: 55px;
 }
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
   background: rgba(39,145,63,1);
@@ -220,7 +239,7 @@ width: 100%;
 }
 
 .nav>li{
-  float: none;
+  float: left;
   display: inline-block;
 }
 .nav>li:active{
@@ -228,6 +247,7 @@ width: 100%;
 }
 .naranja{
   background-color: #f59c00;
+  color: white;
 }
 .naranja h3{
   font-size: 100px;
@@ -243,9 +263,23 @@ width: 100%;
   background-color: rgba(103, 166, 219, 0.81);
   width: 100%;
 }
+.navbar-brand{
+  width: 15%;
+
+}
 .navbar-brand>img{
-  width: 200px;
-  padding: 15px;
+  width: 100%;
+  padding: 0px;
+}
+.menu-logo{
+  width: 150px;
+}
+.menu-a{
+  background-color: #f59c00;
+  border-radius: 0px 0px 15px 15px;
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
 }
 /*==========================*/
 .p-welcome{
