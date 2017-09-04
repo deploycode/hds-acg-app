@@ -101,7 +101,7 @@ class PostController extends Controller
      */
     public function editAction(Request $request, Post $post, Slugger $slugger )
     {
-        $oldImage= $ad->getImage();
+        $oldImage= $post->getImage();
         $deleteForm = $this->createDeleteForm($post);
         $editForm = $this->createForm('AppBundle\Form\PostType', $post);
         $editForm->handleRequest($request);
