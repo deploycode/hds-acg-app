@@ -37,7 +37,7 @@
               {% for menu in menus %}
                 {% for post in menu.posts %}
                     {% if loop.first %}
-                      <li><a href="/articulos/{{post.slug}}"> {{post.menu.name}} <span class="sr-only">(current)</span></a></li>
+                      <li><a href="/articulos/{{post.slug}}" id="link-{{post.menu.id}}"> {{post.menu.name}} <span class="sr-only">(current)</span></a></li>
                     {% endif %}
                 {% endfor %}
               {% endfor %}
@@ -62,7 +62,7 @@
           </ol>
         </div>
         <div class="list-group col-xs-3">
-          <li class="list-group-item naranja text-center">{{the_post.menu.name}}</li>
+          <li class="list-group-item text-center" id="list-{{the_post.menu.id}}">{{the_post.menu.name}}</li>
           {% for post in posts if post.menu.id == the_post.menu.id %}
             <a href="/articulos/{{post.slug}}" class="list-group-item {% if post.id == the_post.id %} active {% endif %}">{{ post.title }}</a>
           {% endfor %}

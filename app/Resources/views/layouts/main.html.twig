@@ -72,7 +72,7 @@
               {% for menu in menus %}
                 {% for post in menu.posts %}
                     {% if loop.first %}
-                      <li><a href="/articulos/{{post.slug}}"> {{post.menu.name}} <span class="sr-only">(current)</span></a></li>
+                      <li><a href="/articulos/{{post.slug}}" id="link-{{post.menu.id}}"> {{post.menu.name}} <span class="sr-only">(current)</span></a></li>
                     {% endif %}
                 {% endfor %}
               {% endfor %}
