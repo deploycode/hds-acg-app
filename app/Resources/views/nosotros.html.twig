@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>{{the_post.title }} | ACG</title>
+    <title>Contáctenos | ACG</title>
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,30 +46,26 @@
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
-      <img src="{{asset('hds-acg-layout/img/banner-')}}{{the_post.menu.slug}}.png" id="img-banner-inferior" class="img img-responsive banner-fixed">
+      <img src="{{asset('hds-acg-layout/img/banner-noticias.png')}}" id="img-banner-inferior" class="img img-responsive banner-fixed">
     </header>
     <section class="container">
       <!-- bienvenida -->
       <div class="col-xs-12">
-        <h1 class="text-center" id="post_title">{{the_post.title}}</h1>
+        <h1 class="text-center" id="post_title">Contáctenos</h1>
       </div>
       <article class="col-xs-12  sin-padding" id="articulo">
         <div class="col-xs-12 sin-padding">
           <ol class="breadcrumb">
             <li><a href="/">Inicio</a></li>
-            <li>{{the_post.menu.name}}</li>
-            <li class="active">{{the_post.title}}</li>
+            <li class="active">Contáctenos</li>
           </ol>
         </div>
         <div class="list-group col-xs-3">
-          <li class="list-group-item text-center" id="list-{{the_post.menu.id}}">{{the_post.menu.name}}</li>
-          {% for post in posts if post.menu.id == the_post.menu.id %}
-            <a href="/articulos/{{post.slug}}" class="list-group-item {% if post.id == the_post.id %} active {% endif %}">{{ post.title }}</a>
-          {% endfor %}
+          <p>Dirección</p>
         </div>
         <div class="col-xs-9">
           <p class="text-justify" id="post_content">
-            {% block content %}{% endblock %}
+            <p>Formulario</p>
           </p>
         </div>
       </article>

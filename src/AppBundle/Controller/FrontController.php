@@ -24,7 +24,7 @@ class FrontController extends Controller
   public function viewAction(Post $post , $slug)
   {
     $em = $this->getDoctrine()->getManager();
-    
+
     $query = $em->getRepository('AppBundle:Post')->createQueryBuilder('p')
     ->orderBy('p.updatedAt', 'DESC')
     ->getQuery();
@@ -33,4 +33,15 @@ class FrontController extends Controller
     $posts = $em->getRepository('AppBundle:Post')->findAll();
     return $this->render('post.html.twig' , array('posts' => $posts ,'the_post' => $the_post , 'menus'=>$menus) );
   }
+
+  /**
+  *@Route("/nosotros", name="nosotros")
+  */
+   public function nosotrosAction()
+   {
+     $em = $this->getDoctrine()->getManager();
+
+     $menus = $em->getRepository('AppBundle:Menu')->findAll();
+     return $this->render('nosotros.html.twig', array ('menus'=>$menus));
+   }
 }
