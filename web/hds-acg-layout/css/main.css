@@ -73,6 +73,7 @@ width: 100%;
   z-index: 1;
   top: 35%;
   left: 35%;
+  opacity: 0.6;
 }
 #logo-menu{
   width: 48px;
