@@ -25,7 +25,7 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('post_show', { 'id': post.id }) }}">show</a>
+                            <a target="_blank" href="{{ path('post_view', { 'slug': post.slug }) }}">show</a>
                         </li>
                         <li>
                             <a href="{{ path('post_edit', { 'id': post.id }) }}">edit</a>
