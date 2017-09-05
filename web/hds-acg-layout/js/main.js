@@ -1,8 +1,7 @@
 $(document).ready(function(){
   var flag = false;
   var scroll;
-  var alto = screen.height - 100;
-
+  var alto = window.innerHeight;
   $(window).scroll(function(){
     scroll = $(window).scrollTop();
     if((scroll > alto) && (screen.width>768)){
