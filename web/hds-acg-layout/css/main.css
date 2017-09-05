@@ -68,11 +68,11 @@ width: 100%;
   width: 100%;
 }
 #logo{
-  width: 35%;
+  width: 25%;
   position: absolute;
   z-index: 1;
-  top: 55%;
-  left: 32%;
+  top: 35%;
+  left: 35%;
 }
 #logo-menu{
   width: 48px;
