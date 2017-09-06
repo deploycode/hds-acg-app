@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Entity\Post;
 
 class FrontController extends Controller
@@ -35,13 +36,38 @@ class FrontController extends Controller
   }
 
   /**
-  *@Route("/nosotros", name="nosotros")
+  *@Route("/contacto", name="contacto")
   */
-   public function nosotrosAction()
+   public function contactoAction()
    {
      $em = $this->getDoctrine()->getManager();
 
      $menus = $em->getRepository('AppBundle:Menu')->findAll();
      return $this->render('nosotros.html.twig', array ('menus'=>$menus));
    }
+
+   /**
+  *@Route("/email", name="correo")
+  */
+  public function correoAction(Request $request, \Swift_Mailer $mailer)
+  {
+    $message = (new \Swift_Message('Hola'))
+        ->setFrom('web@hablemosdesalud.com.co')
+        ->setTo('promocionyprevencion@hablemosdesalud.com.co')
+        ->setSubject('Mensaje de Hablemos de Salud')
+        ->setBody(
+            $this->renderView(
+                'mail.html.twig',
+                array(
+                        'name' => $request->request->get('name'),
+                        'phone' => $request->request->get('phone'),
+                        'correo' => $request->request->get('email')
+                      )
+            ),
+            'text/html'
+        )
+    ;
+    $mailer->send($message);
+    return $this->redirectToRoute('inicio');
+  }
 }

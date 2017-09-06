@@ -16,36 +16,7 @@
   <body>
 
     <header>
-
-      <!-- menu -->
-      <nav class="navbar navbar-fixed-top">
-        <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <!-- <a class="navbar-brand" href="/"><img src="{{asset('hds-acg-layout/img/logo.png')}}" alt=""></a> -->
-          </div>
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav" id="menu">
-              <li><a href="/" class="menu-a"><img src="{{asset('hds-acg-layout/img/logo.png')}}" alt="" class="menu-logo"></a></li>
-              {% for menu in menus %}
-                {% for post in menu.posts %}
-                    {% if loop.first %}
-                      <li><a href="/articulos/{{post.slug}}" id="link-{{post.menu.id}}"> {{post.menu.name}} <span class="sr-only">(current)</span></a></li>
-                    {% endif %}
-                {% endfor %}
-              {% endfor %}
-              <li><a href="/nosotros">Contáctenos <span class="sr-only">(current)</span></a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
+      {% include 'menu.html.twig' %}
       <img src="{{asset('hds-acg-layout/img/banner-noticias.png')}}" id="img-banner-inferior" class="img img-responsive banner-fixed">
     </header>
     <section class="container">
@@ -61,11 +32,34 @@
           </ol>
         </div>
         <div class="list-group col-xs-3">
-          <p>Dirección</p>
+          <h3>Asociación Colombiana de Glaucoma</h3>
+          <p>Pida su cita con nosotros llamando al <br>
+            6164585 <br>
+            O diligenciando el formulario y en breve le contactaremos
+          </p>
         </div>
         <div class="col-xs-9">
           <p class="text-justify" id="post_content">
-            <p>Formulario</p>
+            <form class="form" action="{{ path('correo') }}" method="post">
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="name">Nombre:</label>
+                  <input type="text" name="name" class="form-control" placeholder="Favor ingrese su nombre" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Teléfono:</label>
+                  <input type="text" name="phone" class="form-control" placeholder="Favor ingrese un número de contacto" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Correo:</label>
+                  <input type="text" name="email" class="form-control" placeholder="Favor ingrese su correo electrónico" required>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="reset" class="btn btn-warning" data-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-success">Solicitar una cita</button>
+              </div>
+            </form>
           </p>
         </div>
       </article>

@@ -6,12 +6,12 @@ $(document).ready(function(){
     scroll = $(window).scrollTop();
     if((scroll > alto) && (screen.width>768)){
       if(!flag){
-        $(".menu-third").addClass('navbar-fixed-top');
+        $(".navbar").addClass('navbar-fixed-top');
         flag = true;
       }
     }else{
       if(flag){
-        $(".menu-third").removeClass('navbar-fixed-top');
+        $(".navbar").removeClass('navbar-fixed-top');
         flag = false;
       }
     }

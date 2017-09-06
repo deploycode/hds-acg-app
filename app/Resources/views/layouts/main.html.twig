@@ -51,36 +51,7 @@
           <span class="sr-only">Next</span>
         </a> -->
       </div>
-      <!-- menu -->
-      <nav class="navbar menu-third sombra">
-        <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <!-- <a class="navbar-brand" id="navbar-brand-home" href="/"><img src="{{asset('hds-acg-layout/img/icono-web.png')}}" alt=""></a> -->
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav" id="menu">
-              <li><a href="/" class="menu-a"><img src="{{asset('hds-acg-layout/img/logo.png')}}" alt="" class="menu-logo"></a></li>
-              {% for menu in menus %}
-                {% for post in menu.posts %}
-                    {% if loop.first %}
-                      <li><a href="/articulos/{{post.slug}}" id="link-{{post.menu.id}}"> {{post.menu.name}} <span class="sr-only">(current)</span></a></li>
-                    {% endif %}
-                {% endfor %}
-              {% endfor %}
-              <li><a href="/nosotros/">Contáctenos <span class="sr-only">(current)</span></a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
+      {% include 'menu.html.twig' %}
     </header>
     <section class="container-fluid">
       <!-- bienvenida -->
