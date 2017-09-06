@@ -43,7 +43,7 @@ class FrontController extends Controller
      $em = $this->getDoctrine()->getManager();
 
      $menus = $em->getRepository('AppBundle:Menu')->findAll();
-     return $this->render('nosotros.html.twig', array ('menus'=>$menus));
+     return $this->render('contacto.html.twig', array ('menus'=>$menus));
    }
 
    /**
