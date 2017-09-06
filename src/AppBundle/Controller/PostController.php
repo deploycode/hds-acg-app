@@ -112,7 +112,9 @@ class PostController extends Controller
             $post->setSlug($slug);
             if (!empty($editForm['image']->getData()))
             {
-              unlink('uploads/'.$oldImage);
+              if (!empty($oldImage)) {
+                unlink('uploads/'.$oldImage);
+              }
               $file=$editForm['image']->getData();
               $ext=$file->guessExtension();
               $file_name=md5(uniqid()).".".$ext;
@@ -150,8 +152,10 @@ class PostController extends Controller
             $em->remove($post);
             $em->flush();
 
-            $image=$post->getImage();
-            unlink('uploads/'.$image);
+            if ($post->getImage()) {
+              $image=$post->getImage();
+              unlink('uploads/'.$image);
+            }
         }
 
         return $this->redirectToRoute('post_index');
