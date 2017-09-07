@@ -52,9 +52,9 @@ class FrontController extends Controller
   public function correoAction(Request $request, \Swift_Mailer $mailer)
   {
     $message = (new \Swift_Message('Hola'))
-        ->setFrom('web@hablemosdesalud.com.co')
+        ->setFrom('auxiliar@glaucoma.org.co')
         ->setTo('promocionyprevencion@hablemosdesalud.com.co')
-        ->setSubject('Mensaje de Hablemos de Salud')
+        ->setSubject('Mensaje de Asociación Colombiana de Glaucoma')
         ->setBody(
             $this->renderView(
                 'mail.html.twig',
@@ -68,6 +68,6 @@ class FrontController extends Controller
         )
     ;
     $mailer->send($message);
-    return $this->redirectToRoute('inicio');
+    return $this->redirectToRoute('home');
   }
 }
