@@ -53,7 +53,7 @@ class FrontController extends Controller
   {
     $message = (new \Swift_Message('Hola'))
         ->setFrom('auxiliar@glaucoma.org.co')
-        ->setTo('promocionyprevencion@hablemosdesalud.com.co')
+        ->setTo('educacion@altavision.com.co')
         ->setSubject('Mensaje de Asociación Colombiana de Glaucoma')
         ->setBody(
             $this->renderView(
