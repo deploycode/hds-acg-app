@@ -23,6 +23,9 @@
 
 }
 /*==========================*/
+a{
+  text-decoration: none!important;
+}
 body{
   font-family: "Hind Siliguri";
 }
@@ -50,9 +53,29 @@ footer>p{
 #articulo a{
   text-decoration: none;
 }
+#articulo img{
+  margin: auto;
+  margin-bottom: 15px;
+  display: flex;
+  padding: 15px;
+  /*border-radius: 30px;*/
+  -webkit-box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.75);
+}
+#articulo a>img{
+  border-radius: 100%;
+}
+#articulo a>img:hover{
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(105,125,255,1);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(105,125,255,1);
+  box-shadow: 0px 0px 15px 0px rgba(105,125,255,1);
+}
+#articulo p{
+  margin: 0px;
+}
 strong{
   color: #777;
-  font-weight: normal;
 }
 #carousel123{
   padding: 50px;
