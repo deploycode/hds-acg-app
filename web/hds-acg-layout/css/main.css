@@ -125,6 +125,7 @@ width: 100%;
   padding: 0px;
 }
 #phone{
+  margin: auto;
   width: 400px;
   margin-top: 15px;
   margin-bottom: -40px;
@@ -276,6 +277,13 @@ width: 100%;
   margin:0px;
   z-index: 99;
 }
+  .navbar-toggle{
+    border: 2px solid white;
+  }
+  .icon-bar{
+    background: white;
+  }
+
 .nav{
   text-align: center;
   height: 55px;

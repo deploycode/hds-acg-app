@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{asset('hds-acg-layout/plugins/bootstrap/css/bootstrap.min.css')}}" >
     <link rel="stylesheet" href="{{asset('hds-acg-layout/plugins/font-awesome/css/font-awesome.min.css')}}" >
     <link rel="stylesheet" href="{{asset('hds-acg-layout/css/main.css')}}" >
+    <link rel="stylesheet" media="(max-width: 768px)" href="{{asset('hds-acg-layout/css/mobile.css')}}" >
     <link rel="stylesheet" href="{{asset('hds-acg-layout/css/carousel.css')}}" >
     <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=59b197495377b300129952f5&product=inline-share-buttons' async='async'></script>
 
@@ -44,13 +45,13 @@
             <li class="active">{{the_post.title}}</li>
           </ol>
         </div>
-        <div class="list-group col-xs-3">
+        <div class="list-group col-xs-12 col-sm-3">
           <li class="list-group-item text-center" id="list-{{the_post.menu.id}}">{{the_post.menu.name}}</li>
           {% for post in posts if post.menu.id == the_post.menu.id %}
             <a href="/articulos/{{post.slug}}" class="list-group-item {% if post.id == the_post.id %} active {% endif %}">{{ post.title }}</a>
           {% endfor %}
         </div>
-        <div class="col-xs-9">
+        <div class="col-xs-12 col-sm-9">
           <p class="text-justify" id="post_content">
             {% block content %}{% endblock %}
           </p>

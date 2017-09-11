@@ -1,0 +1,28 @@
+#menu>li{
+  display: block;
+  width: 100%;
+  background-color:
+}
+#post_title{
+  margin-top: 50px;
+  font-size: 22px;
+}
+.welcome>img{
+  height: auto!important;
+}
+.welcome{
+  height: 92vh!important;
+}
+#articulo img{
+  height: auto!important;
+  width: 100%!important;
+}
+.breadcrumb li{
+  display: block;
+}
+.navbar-brand{
+  color: white;
+}
+.verde h3{
+  margin-top: 30px;
+}

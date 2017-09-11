@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{asset('hds-acg-layout/plugins/bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('hds-acg-layout/plugins/font-awesome/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('hds-acg-layout/css/main.css')}}" >
+    <link rel="stylesheet" media="(max-width: 768px)" href="{{asset('hds-acg-layout/css/mobile.css')}}" >
     <link rel="stylesheet" href="{{asset('hds-acg-layout/css/carousel.css')}}" >
   </head>
   <body>
@@ -30,7 +31,7 @@
     <header>
       <img src="{{asset('hds-acg-layout/img/logo.png')}}" alt="" id="logo">
       <!-- carousel -->
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <div id="carousel-example-generic" class="carousel slide hidden-xs" data-ride="carousel">
         <!-- Indicators -->
         <!-- <ol class="carousel-indicators">
           <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -85,34 +86,34 @@
             <div class="carousel-inner" role="listbox">
 
               <div class="item active">
-                <div class="col-xs-6 verde item-todo">
+                <div class="col-xs-12 col-sm-6 verde item-todo">
                   <h3 class="text-center">Todo sobre Glaucoma</h3>
                   <p class="text-justify">El glaucoma es una enfermedad degenerativa de la visión que se presenta en la mayoría de los casos de manera asintomática. Conozca a profundidad qué es el glaucoma, tipos de glaucoma, síntomas de glaucoma e información adicional para su prevención y tratamiento.</p>
                   <p class="text-center"><a href="/articulos/glaucoma" class="btn btn-sm btn-primary btn-hds" role="button">Conoce más</a></p>
                 </div>
-                <div class="col-xs-6 sin-padding">
+                <div class="hidden-xs col-sm-6 sin-padding">
                   <img src="{{asset('hds-acg-layout/img/m1.jpg')}}" alt="" class="img img-responsive sheet al100">
                 </div>
               </div>
 
               <div class="item">
-                <div class="col-xs-6 azul item-todo">
+                <div class="col-xs-12 col-sm-6 azul item-todo">
                   <h3 class="text-center">Prevención de Glaucoma</h3>
                   <p class="text-justify">El tratamiento para el glaucoma es fundamental para que le enfermedad no avance. Para realizar un correcto tratamiento es indispensable conocer el procedencia de la enfermedad que le permitirá elegir al paciente el mejor método y lograr excelentes resultados.</p>
                   <p class="text-center"><a href="/articulos/tratamiento-slt-la-alternativa-mas-segura" class="btn btn-sm btn-primary btn-hds" role="button">Conoce más</a></p>
                 </div>
-                <div class="col-xs-6 sin-padding">
+                <div class="hidden-xs col-sm-6 col-sm-6 sin-padding">
                   <img src="{{asset('hds-acg-layout/img/m2.jpg')}}" alt="" class="img img-responsive sheet al100">
                 </div>
               </div>
 
               <div class="item">
-                <div class="col-xs-6 morado item-todo">
+                <div class="col-xs-12 col-sm-6 morado item-todo">
                   <h3 class="text-center">Todo sobre Glaucoma</h3>
                   <p class="text-justify">Prevenir el glaucoma es una tarea de todos. Cualquier persona independiente de su edad, sexo o raza, puede tener la enfermedad sin saberlo. Un diagnóstico oportuno es fundamental para lograr un tratamiento exitoso del glaucoma en su familia, hijos, padres, abuelos y nietos. </p>
                   <p class="text-center"><a href="/articulos/como-prevenir-la-ceguera-por-glaucoma" class="btn btn-sm btn-primary btn-hds" role="button">Conoce más</a></p>
                 </div>
-                <div class="col-xs-6 sin-padding">
+                <div class="hidden-xs col-sm-6 sin-padding">
                   <img src="{{asset('hds-acg-layout/img/m3.jpg')}}" alt="" class="img img-responsive sheet al100">
                 </div>
               </div>
@@ -131,7 +132,7 @@
           </div>
         </div>
       </div>
-      <div class="row thumbnail welcome sheet sin-padding">
+      <div class="row hidden-xs thumbnail welcome sheet sin-padding">
         <img src="{{asset('hds-acg-layout/img/manos.jpg')}}" alt="..." class="sheet img img-responsive al100">
         <div class="caption tengo">
           <div  class="text-center col-xs-4 glaucoma">
@@ -245,7 +246,7 @@
           <p class="text-center"><a href="post.html" class="btn btn-sm btn-primary btn-hds btn-new" role="button">Conoce más</a></p>
         </div>
       </div> -->
-      <div class="text-center col-xs-12" id="p_number"><img src="{{asset('hds-acg-layout/img/phone.png')}}" id="phone" alt=""></div>
+      <div class="text-center col-xs-12" id="p_number"><img src="{{asset('hds-acg-layout/img/phone.png')}}" id="phone" alt="" class="img img-responsive"></div>
       <div class="row" id="row-banner-inferior">
         <img src="{{asset('hds-acg-layout/img/banner-inferior-2.jpg')}}" id="img-banner-inferior" class="img img-responsive">
         <!-- <ul class="nav nav-pills" id="ul-banner-inferior">
