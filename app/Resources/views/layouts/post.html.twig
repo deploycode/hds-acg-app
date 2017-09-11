@@ -56,7 +56,7 @@
         <div class="list-group hidden-xs col-sm-3">
           <li class="list-group-item text-center" id="list-{{the_post.menu.id}}">{{the_post.menu.name}}</li>
           {% for post in posts if post.menu.id == the_post.menu.id %}
-            <a href="/articulos/{{post.slug}}" class="list-group-item {% if post.id == the_post.id %} active {% endif %}">{{ post.title }}</a>
+            <a href="/articulos/{{post.slug}}" class="list-group-item {% if post.id == the_post.id %} active {% endif %} list-a-{{the_post.menu.id}}">{{ post.title }}</a>
           {% endfor %}
         </div>
         <div class="hidden-sm hidden-md hidden-lg sidebar-nav col-xs-12">
