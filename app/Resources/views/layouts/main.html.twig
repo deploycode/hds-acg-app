@@ -6,7 +6,7 @@
     <meta name="description" content="La Asociación Colombiana de Glaucoma es una entidad sin ánimo de lucro de carácter nacional, adscrita a la Asociación Mundial de pacientes con Glaucoma.  Somos un grupo interdisciplinario de profesionales que unidos trabajamos para prevenir la ceguera por glaucoma en Colombia, a través de un diagnóstico oportuno y un tratamiento adecuado.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="icon" href="favicon-glaucoma.ico">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{{asset('hds-acg-layout/plugins/bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('hds-acg-layout/plugins/font-awesome/css/font-awesome.min.css')}}">
@@ -67,7 +67,7 @@
     <section class="container-fluid">
       <!-- bienvenida -->
 
-      <div class="row">
+      <div class="row hidden-xs">
         <div class="col-xs-12 thumbnail welcome sheet sin-padding">
           <img src="{{asset('hds-acg-layout/img/welcome.jpg')}}" alt="..." class="img img-responsive sheet al100">
           <div class="caption">
@@ -78,6 +78,19 @@
             </p>
             <p class="text-center"><a href="/articulos/glaucoma" class="btn btn-sm btn-primary btn-hds" role="button">Conoce más</a></p>
           </div>
+        </div>
+      </div>
+      <div class="row hidden-sm hidden-md- hidden-lg">
+        <div class="col-xs-12 thumbnail sin-padding">
+          <img src="{{asset('hds-acg-layout/img/welcome.jpg')}}" alt="..." class="img img-responsive al100">
+        </div>
+        <div class="col-xs-12">
+          <h3 class="text-center">¡Bienvenido!</h3>
+          <p  class="text-center p-welcome">
+            La VISTA es uno de los sentidos más útiles, pero pocas veces pensamos en ello; tradicionalmente acudimos al médico cuando sentimos dolor o malestar. Sin embargo, algunos padecimientos se desarrollan silenciosamente y cuando se manifiestan es imposible revertir el daño, este es el caso del glaucoma.  Actualmente la esperanza de vida al nacer es de 74 años, durante todo este tiempo nuestros ojos deben cumplir su objetivo funcional y estético, pero ¿cuánto hemos hecho para que <br> nuestros ojos duren toda la vida? <br>
+            En esta página encontrará información importante que le ayudará a conservar su salud visual. <br>
+          </p>
+          <p class="text-center"><a href="/articulos/glaucoma" class="btn btn-sm btn-primary btn-hds" role="button">Conoce más</a></p>
         </div>
       </div>
       <div class="row sheet">
