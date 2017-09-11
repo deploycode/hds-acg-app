@@ -15,6 +15,14 @@
     <link rel="stylesheet" href="{{asset('hds-acg-layout/css/carousel.css')}}" >
     <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=59b197495377b300129952f5&product=inline-share-buttons' async='async'></script>
 
+    <!-- MetisMenu CSS -->
+    <link href="{{asset('hds-dashboard-layout/vendor/metisMenu/metisMenu.min.css')}}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{asset('hds-dashboard-layout/dist/css/sb-admin-2.css')}}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{{asset('hds-dashboard-layout/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
   </head>
   <body>
     <script>
@@ -38,18 +46,32 @@
         <h1 class="text-center" id="post_title">{{the_post.title}}</h1>
       </div>
       <article class="col-xs-12  sin-padding" id="articulo">
-        <div class="col-xs-12 sin-padding">
+        <div class="hidden-xs col-sm-12 sin-padding">
           <ol class="breadcrumb">
             <li><a href="/">Inicio</a></li>
             <li>{{the_post.menu.name}}</li>
             <li class="active">{{the_post.title}}</li>
           </ol>
         </div>
-        <div class="list-group col-xs-12 col-sm-3">
+        <div class="list-group hidden-xs col-sm-3">
           <li class="list-group-item text-center" id="list-{{the_post.menu.id}}">{{the_post.menu.name}}</li>
           {% for post in posts if post.menu.id == the_post.menu.id %}
             <a href="/articulos/{{post.slug}}" class="list-group-item {% if post.id == the_post.id %} active {% endif %}">{{ post.title }}</a>
           {% endfor %}
+        </div>
+        <div class="hidden-sm hidden-md hidden-lg sidebar-nav col-xs-12">
+          <ul class="nav" id="side-menu">
+              <li id="list-{{the_post.menu.id}}">
+                  <a >{{the_post.menu.name}}<span class="fa arrow"></span></a>
+                  <ul class="nav nav-second-level">
+                    {% for post in posts if post.menu.id == the_post.menu.id %}
+                      <li>
+                        <a href="/articulos/{{post.slug}}" class="list-group-item {% if post.id == the_post.id %} active {% endif %}">{{ post.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+              </li>
+          </ul>
         </div>
         <div class="col-xs-12 col-sm-9">
           <p class="text-justify" id="post_content">
@@ -64,5 +86,10 @@
     <script src="{{asset('hds-acg-layout/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('hds-acg-layout/js/carousel.js')}}"></script>
     <script src="{{asset('hds-acg-layout/js/main.js')}}"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="{{asset('hds-dashboard-layout/vendor/metisMenu/metisMenu.min.js')}}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{{asset('hds-dashboard-layout/dist/js/sb-admin-2.js')}}"></script>
   </body>
 </html>

@@ -7,6 +7,9 @@
   margin-top: 50px;
   font-size: 22px;
 }
+#phone{
+  padding: 30px;
+}
 .welcome>img{
   height: auto!important;
 }
@@ -25,4 +28,14 @@
 }
 .verde h3{
   margin-top: 30px;
+}
+.sheet{
+  height: auto!important;
+}
+#side-menu li{
+  width: 100%;
+}
+#side-menu>li>a ,#side-menu>li>a:focus, #side-menu>li>a:hover {
+    background: transparent;
+    color: white;
 }
