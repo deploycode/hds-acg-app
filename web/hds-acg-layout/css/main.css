@@ -75,6 +75,9 @@ footer>p{
 #articulo p{
   margin: 0px;
 }
+.arrow{
+  font-size: 22px!important;
+}
 strong{
   color: #777;
 }
