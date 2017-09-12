@@ -52,6 +52,7 @@ footer>p{
 }
 #articulo a{
   text-decoration: none;
+  border-radius: 0px;
 }
 #articulo img{
   margin: auto;
