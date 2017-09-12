@@ -66,13 +66,9 @@
                   <a >{{the_post.menu.name}}<span class="fa arrow"></span></a>
                   <ul class="nav nav-second-level">
                     {% for post in posts if post.menu.id == the_post.menu.id %}
-                      {% if post.id == the_post.id %}
-                          <li><a href="#" class="list-a-{{the_post.menu.id}} list-group-item active">{{ post.title }}</a></li>
-                        {% else %}
                           <li>
-                            <a href="/articulos/{{post.slug}}" class="list-a-{{the_post.menu.id}} list-group-item ">{{ post.title }}</a>
+                            <a {% if post.id != the_post.id %}href="/articulos/{{post.slug}}"{% endif %} class="list-a-{{the_post.menu.id}} list-group-item {% if post.id == the_post.id %} active {% endif %}">{{ post.title }}</a>
                           </li>
-                        {% endif %}
                     {% endfor %}
                   </ul>
               </li>
