@@ -66,7 +66,7 @@
                   <ul class="nav nav-second-level">
                     {% for post in posts if post.menu.id == the_post.menu.id %}
                       <li>
-                        <a href="/articulos/{{post.slug}}" class="list-group-item {% if post.id == the_post.id %} active {% endif %}">{{ post.title }}</a>
+                        <a href="/articulos/{{post.slug}}" class="list-a-{{the_post.menu.id}} list-group-item {% if post.id == the_post.id %} active {% endif %}">{{ post.title }}</a>
                       </li>
                     {% endfor %}
                   </ul>

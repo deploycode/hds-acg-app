@@ -52,3 +52,19 @@
 #link-4{
   background-color: #d08400;
 }
+
+.list-a-1.active, .list-a-1.active:focus, .list-a-1.active:hover{
+  background: #a6dba0;
+  border: #a6dba0;
+  color: white;
+}
+.list-a-2.active, .list-a-2.active:focus, .list-a-2.active:hover{
+  background: #7cc2ff;
+  border: #7cc2ff;
+  color: white;
+}
+.list-a-3.active, .list-a-3.active:focus, .list-a-3.active:hover{
+  background: #ac71cc;
+  border: #ac71cc;
+  color: white;
+}
