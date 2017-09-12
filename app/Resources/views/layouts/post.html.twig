@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="http://www.glaucoma.org.co/favicon-glaucoma.ico?v=2" />
-    
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{{asset('hds-acg-layout/plugins/bootstrap/css/bootstrap.min.css')}}" >
     <link rel="stylesheet" href="{{asset('hds-acg-layout/plugins/font-awesome/css/font-awesome.min.css')}}" >
@@ -66,9 +66,13 @@
                   <a >{{the_post.menu.name}}<span class="fa arrow"></span></a>
                   <ul class="nav nav-second-level">
                     {% for post in posts if post.menu.id == the_post.menu.id %}
-                      <li>
-                        <a href="/articulos/{{post.slug}}" class="list-a-{{the_post.menu.id}} list-group-item {% if post.id == the_post.id %} active {% endif %}">{{ post.title }}</a>
-                      </li>
+                      {% if post.id == the_post.id %}
+                          <li><a href="#" class="list-a-{{the_post.menu.id}} list-group-item active">{{ post.title }}</a></li>
+                        {% else %}
+                          <li>
+                            <a href="/articulos/{{post.slug}}" class="list-a-{{the_post.menu.id}} list-group-item ">{{ post.title }}</a>
+                          </li>
+                        {% endif %}
                     {% endfor %}
                   </ul>
               </li>
