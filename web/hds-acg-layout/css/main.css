@@ -38,6 +38,7 @@ footer>p{
 }
 /*==========================*/
 #articulo{
+  overflow: hidden;
   background-color: white;
   padding: 15px;
   padding-bottom: 100px;
