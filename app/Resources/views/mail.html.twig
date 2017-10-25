@@ -1,4 +1,56 @@
-<img src="{{ absolute_url(asset('hds-acg-layout\img\icono-web.png')) }}" width="200px"> <br><br>
-{% if name %}Nombre    : {{ name }}  <br>{% endif %}
-{% if phone %}Teléfono  : {{ phone }} <br>{% endif %}
-{% if correo %}Email     : {{correo}}  <br>{% endif %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .container{
+        width: 50%;
+        margin: auto;
+        background-color: white;
+        padding: 15px;
+        border-radius: 15px;
+        text-align: center;
+        font-family: courier;
+      }
+      #title{
+        font-size: 12px;
+      }
+      img{
+        background-color:#f49b00;
+        width:150px;
+        border-radius: 15px;
+        padding: 10px;
+        margin-bottom: 15px;
+      }
+      p{
+        color: black;
+        font-size: 16px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        font-family: courier;
+      }
+      section{
+        background-color:#f49b00;
+        padding: 15px;
+      }
+      article{
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <!-- <img src="http://www.glaucoma.org.co/hds-acg-layout/img/logo.png" > -->
+        <p id="title">Éste mensaje es enviado desde el formulario web de glaucoma.org.co para educacion@altavision.com.co</p>
+        <hr>
+      </div>
+    </section>
+    <article>
+      <p>{% if name %}Nombre    :   {{ name }}   {% endif %}</p>
+      <p>{% if phone %}Teléfono  :  {{ phone }} {% endif %}</p>
+      <p>{% if correo %}Email     : {{correo}} {% endif %}</p>
+    </article>
+  </body>
+</html>
