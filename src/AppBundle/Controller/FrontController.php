@@ -51,23 +51,25 @@ class FrontController extends Controller
   */
   public function correoAction(Request $request, \Swift_Mailer $mailer)
   {
-    $message = (new \Swift_Message('Hola'))
-        ->setFrom('web@hablemosdesalud.com.co')
-        ->setTo('educacion@altavision.com.co')
-        ->setSubject('Mensaje de Asociación Colombiana de Glaucoma')
-        ->setBody(
-            $this->renderView(
-                'mail.html.twig',
-                array(
-                        'name' => $request->request->get('name'),
-                        'phone' => $request->request->get('phone'),
-                        'correo' => $request->request->get('email')
-                      )
-            ),
-            'text/html'
+    if ($request->get('carnada')=="") {
+      $message = (new \Swift_Message('Hola'))
+      ->setFrom('web@hablemosdesalud.com.co')
+      ->setTo('educacion@altavision.com.co')
+      ->setSubject('Mensaje de Asociación Colombiana de Glaucoma')
+      ->setBody(
+        $this->renderView(
+          'mail.html.twig',
+          array(
+            'name' => $request->request->get('name'),
+            'phone' => $request->request->get('phone'),
+            'correo' => $request->request->get('email')
+          )
+        ),
+        'text/html'
         )
-    ;
-    $mailer->send($message);
-    return $this->redirectToRoute('home');
+        ;
+        $mailer->send($message);
+        return $this->redirectToRoute('home');
+    }
   }
 }
