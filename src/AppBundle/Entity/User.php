@@ -46,7 +46,7 @@ class User implements AdvancedUserInterface, \Serializable
     /**
      * @var string
      *
-     * @ORM\Column(name="role", type="string", length=50, columnDefinition="ENUM('ROLE_ADMIN')" )
+     * @ORM\Column(name="role", type="string", length=50, columnDefinition="ENUM('ROLE_ADMIN', 'ROLE_PUBLISHER')" )
      */
     private $role;
 
