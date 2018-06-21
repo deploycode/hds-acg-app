@@ -54,7 +54,7 @@ class FrontController extends Controller
     if ($request->get('carnada')=="") {
       $message = (new \Swift_Message('Hola'))
       ->setFrom('web@hablemosdesalud.com.co')
-      ->setTo('educacion@altavision.com.co')
+      ->setTo('educacion@glaucoma.org.co')
       ->setSubject('Mensaje de Asociación Colombiana de Glaucoma')
       ->setBody(
         $this->renderView(
